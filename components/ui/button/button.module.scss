@@ -1,0 +1,24 @@
+@import "@/scss/mixins.scss";
+@import "@/scss/variables.scss";
+
+.button {
+  @include reset-button();
+  @include focus();
+  align-items: center;
+  background-color: $background-button;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  display: grid;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 11px;
+  transition: all $transition-time;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.buttonLabel {
+  @include textBody($color-text-button);
+}

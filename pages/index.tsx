@@ -1,6 +1,9 @@
 import { Roboto } from 'next/font/google';
 import Head from 'next/head';
 
+import Button from '@/components/ui/button';
+import NextJsLogo from '@/assets/icons/nextjs.svg';
+
 const fontSans = Roboto({
   variable: '--font-sans',
   subsets: ['latin'],
@@ -18,7 +21,8 @@ export default function Home() {
       </Head>
       <div className={fontSans.variable}>
         <main>
-          <h1>Hello World</h1>
+          <NextJsLogo />
+          <Button label="Click Me!" onClick={() => alert('Button Clicked')} />
         </main>
       </div>
     </>

@@ -11,6 +11,18 @@ $font-weight-bold: 700;
 
 // BACKGROUNDS
 $background-body: #ffffff;
+$background-button: #9b87f5;
 
 // COLORS
 $color-text-body: #3b3b3b;
+$color-text-button: #ffffff;
+$color-outline: #35cdfd;
+$color-white: #ffffff;
+
+// TRANSITION TIME
+$transition-time: 0.15s;
+
+// SHADOWS
+$focus-shadow:
+  0 0 0 1px $color-white,
+  0 0 0 3px $color-outline;
