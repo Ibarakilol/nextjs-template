@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Button from '@/components/ui/button';
 import NextJsLogo from '@/assets/icons/nextjs.svg';
 
+import { useCounterStore } from '@/hooks/use-counter-store';
+
 const fontSans = Roboto({
   variable: '--font-sans',
   subsets: ['latin'],
@@ -11,6 +13,8 @@ const fontSans = Roboto({
 });
 
 export default function Home() {
+  const counterStore = useCounterStore();
+
   return (
     <>
       <Head>
@@ -22,7 +26,9 @@ export default function Home() {
       <div className={fontSans.variable}>
         <main>
           <NextJsLogo />
-          <Button label="Click Me!" onClick={() => alert('Button Clicked')} />
+          <span>{counterStore.counter}</span>
+          <Button label="Decrement" onClick={counterStore.onDecrement} />
+          <Button label="Increment" onClick={counterStore.onIncrement} />
         </main>
       </div>
     </>
